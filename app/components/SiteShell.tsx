@@ -136,6 +136,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 alt="Cadê Minha Mala — Agência de Viagens e Turismo"
                 width={520}
                 height={291}
+                loading="eager"
                 unoptimized
               />
             </Link>
