@@ -90,7 +90,8 @@ summary:focus-visible {
 }
 
 .nav-wrap {
-  min-height: 96px;
+  min-height: 98px;
+  padding-block: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -99,7 +100,7 @@ summary:focus-visible {
 
 .official-logo-link {
   display: block;
-  width: 174px;
+  width: 146px;
   flex: none;
 }
 
@@ -2897,7 +2898,7 @@ summary:focus-visible {
   }
 
   .official-logo-link {
-    width: 158px;
+    width: 136px;
   }
 
   .nav-cta {
@@ -2921,10 +2922,10 @@ summary:focus-visible {
   .main-nav {
     display: none;
     position: absolute;
-    top: 96px;
+    top: 98px;
     left: 0;
     right: 0;
-    max-height: calc(100dvh - 96px);
+    max-height: calc(100dvh - 98px);
     overflow-y: auto;
     background: white;
     padding: 12px 20px 24px;
@@ -3143,16 +3144,17 @@ summary:focus-visible {
   }
 
   .nav-wrap {
-    min-height: 76px;
+    min-height: 82px;
+    padding-block: 10px;
   }
 
   .official-logo-link {
-    width: 136px;
+    width: 110px;
   }
 
   .main-nav {
-    top: 76px;
-    max-height: calc(100dvh - 76px);
+    top: 82px;
+    max-height: calc(100dvh - 82px);
   }
 
   .hero {
