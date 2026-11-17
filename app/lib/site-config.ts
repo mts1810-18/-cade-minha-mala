@@ -4,8 +4,8 @@ export const siteConfig = {
   url: "https://www.cademinhamala.com.br",
   email: "contato@cademinhamala.com.br",
   whatsapp: {
-    number: "5547989072765",
-    display: "(47) 98907-2765",
+    number: "5547989072766",
+    display: "(47) 98907-2766",
     defaultMessage: "Olá! Quero planejar minha próxima viagem com a Cadê Minha Mala.",
   },
   legal: {

@@ -39,8 +39,8 @@ test("renders development preview metadata", async () => {
   );
   const html = await response.text();
   assert.match(html, developmentPreviewMeta);
-  assert.match(html, /5547989072765/);
-  assert.doesNotMatch(html, /989072766|98907-2766/);
+  assert.match(html, /5547989072766/);
+  assert.doesNotMatch(html, /989072765|98907-2765/);
   assert.match(html, /67\.837\.209\/0001-85/);
   assert.match(html, /67\.837\.209 JULIA CHINIKOSKI DE SOUZA/);
 });
@@ -61,10 +61,10 @@ test("renders all institutional routes with status 200 and updated WhatsApp", as
     const response = await fetchRoute(worker, route);
     assert.equal(response.status, 200, `Expected 200 for ${route}`);
     const html = await response.text();
-    assert.match(html, /5547989072765/, `Expected updated WhatsApp on ${route}`);
+    assert.match(html, /5547989072766/, `Expected updated WhatsApp on ${route}`);
     assert.doesNotMatch(
       html,
-      /989072766|98907-2766/,
+      /989072765|98907-2765/,
       `Old WhatsApp found on ${route}`,
     );
   }

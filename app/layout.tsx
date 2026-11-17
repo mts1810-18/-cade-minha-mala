@@ -59,7 +59,7 @@ const schema = {
   logo: `${siteConfig.url}/logo-cade-minha-mala.png`,
   image: `${siteConfig.url}/og-image.png`,
   email: siteConfig.email,
-  telephone: "+55 47 98907-2765",
+  telephone: "+55 47 98907-2766",
   description:
     "Agência de viagens 100% online com atendimento personalizado e cadastro regular no Cadastur.",
   address: {

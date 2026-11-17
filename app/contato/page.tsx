@@ -13,8 +13,7 @@ import { buildWhatsAppUrl, siteConfig } from "../lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contato e dúvidas frequentes",
-  description:
-    "Fale com a Cadê Minha Mala pelo WhatsApp (47) 98907-2765, e-mail ou redes sociais. Tire suas dúvidas sobre atendimento e planejamento de viagens.",
+  description: `Fale com a Cadê Minha Mala pelo WhatsApp ${siteConfig.whatsapp.display}, e-mail ou redes sociais. Tire suas dúvidas sobre atendimento e planejamento de viagens.`,
   alternates: { canonical: "/contato" },
 };
 
