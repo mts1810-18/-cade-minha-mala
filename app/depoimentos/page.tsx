@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MessageCircle, Quote, ShieldCheck, Star } from "lucide-react";
+import { MessageCircle, Star } from "lucide-react";
 import { buildWhatsAppUrl, siteConfig } from "../lib/site-config";
 
 export const metadata: Metadata = {
@@ -13,37 +13,37 @@ const stories = [
   {
     text: "Foi a primeira vez que viajei sem ficar com vinte abas abertas. Resolveram tudo e ainda me avisaram cada próximo passo.",
     name: "Mariana & Caio",
-    route: "MACEIÓ • LUA DE MEL",
+    route: "Maceió, Lua de mel",
     stars: 5,
   },
   {
     text: "O atendimento foi rápido, mas nunca apressado. Sentimos que o roteiro realmente foi pensado para a nossa família.",
     name: "Família Oliveira",
-    route: "GRAMADO • FÉRIAS",
+    route: "Gramado, Férias",
     stars: 5,
   },
   {
     text: "Quando o voo mudou, eu já estava nervosa. A equipe assumiu a situação e me orientou até tudo estar resolvido.",
     name: "Bianca R.",
-    route: "LISBOA • INTERNACIONAL",
+    route: "Lisboa, Internacional",
     stars: 5,
   },
   {
     text: "Recebi opções que cabiam no orçamento e entendi a diferença entre elas. Escolher ficou muito mais fácil.",
     name: "Rafael M.",
-    route: "SALVADOR • FERIADO",
+    route: "Salvador, Feriado",
     stars: 5,
   },
   {
     text: "Organizar uma viagem com duas crianças parecia impossível. No fim, foi o planejamento mais tranquilo que já tivemos.",
     name: "Camila & André",
-    route: "FLORIANÓPOLIS • FAMÍLIA",
+    route: "Florianópolis, Família",
     stars: 5,
   },
   {
     text: "Gostei de ter alguém para perguntar até as coisas que pareciam bobas. Fui muito mais segura para o embarque.",
     name: "Letícia P.",
-    route: "BUENOS AIRES • PRIMEIRA VEZ",
+    route: "Buenos Aires, Primeira vez",
     stars: 5,
   },
 ];
@@ -53,9 +53,6 @@ export default function Depoimentos() {
     <main id="conteudo">
       <section className="inner-hero testimonial-hero">
         <div className="container">
-          <span className="eyebrow eyebrow-light">
-            <i /> EXPERIÊNCIA DE ATENDIMENTO
-          </span>
           <h1>
             Boas viagens viram histórias.{" "}
             <em>Boas experiências viram confiança.</em>
@@ -74,7 +71,7 @@ export default function Depoimentos() {
               <strong>100%</strong>
               <div>
                 <span className="review-highlight">
-                  <ShieldCheck size={18} /> Atendimento humano & Cadastur regular
+                  Atendimento humano e Cadastur regular
                 </span>
                 <small className="review-sub">
                   Relatos representativos dos formatos de viagem que organizamos
@@ -96,7 +93,6 @@ export default function Depoimentos() {
                 key={story.name}
               >
                 <div className="review-top">
-                  <Quote />
                   <div aria-label={`${story.stars} de 5 estrelas`}>
                     {Array.from({ length: story.stars }).map((_, j) => (
                       <Star key={j} />
@@ -105,7 +101,6 @@ export default function Depoimentos() {
                 </div>
                 <blockquote>“{story.text}”</blockquote>
                 <div className="review-author">
-                  <span>{String(i + 1).padStart(2, "0")}</span>
                   <div>
                     <strong>{story.name}</strong>
                     <small>{story.route}</small>
@@ -134,9 +129,6 @@ export default function Depoimentos() {
       <section className="section review-cta">
         <div className="container">
           <div>
-            <span className="kicker kicker-light">
-              SUA HISTÓRIA PODE SER A PRÓXIMA
-            </span>
             <h2>Vamos tirar essa viagem do “um dia”?</h2>
           </div>
           <a

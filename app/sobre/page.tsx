@@ -1,14 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  Check,
-  Globe2,
-  Heart,
-  MessageCircle,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
+import { ArrowUpRight, Check, MessageCircle } from "lucide-react";
 import { buildWhatsAppUrl, siteConfig } from "../lib/site-config";
 
 export const metadata: Metadata = {
@@ -24,9 +16,6 @@ export default function Sobre() {
       <section className="inner-hero">
         <div className="container inner-hero-grid">
           <div>
-            <span className="eyebrow eyebrow-light">
-              <i /> SOBRE A CADÊ MINHA MALA
-            </span>
             <h1>
               A gente acredita que a viagem começa <em>antes do embarque.</em>
             </h1>
@@ -44,7 +33,7 @@ export default function Sobre() {
               <b>QUEM QUER VIAJAR LEVE</b>
             </div>
             <div className="tag-stripes" />
-            <p>ONLINE • HUMANA • PRÁTICA</p>
+            <p>ATENDIMENTO ONLINE</p>
           </div>
         </div>
       </section>
@@ -56,7 +45,6 @@ export default function Sobre() {
               <span>SEM BUROCRACIA</span>
             </div>
             <div className="story-card card-front">
-              <Globe2 />
               <span>NOSSA MISSÃO</span>
               <strong>Tornar o mundo mais simples de alcançar.</strong>
               <div className="story-stamp">
@@ -68,8 +56,7 @@ export default function Sobre() {
           </div>
 
           <div className="section-heading">
-            <span className="kicker">NOSSA HISTÓRIA</span>
-            <h2>Uma agência online. Um atendimento bem próximo.</h2>
+            <h2>Uma agência online com atendimento próximo.</h2>
             <p>
               A Cadê Minha Mala nasceu em {siteConfig.legal.city} para quem quer
               viajar com segurança sem transformar o planejamento em uma segunda
@@ -77,7 +64,7 @@ export default function Sobre() {
               atendimento direto pelo celular.
             </p>
             <p>
-              Não temos loja física — e isso é intencional. Assim, estamos perto
+              Não temos loja física, e isso é intencional. Assim, estamos perto
               de você em qualquer cidade do Brasil, com mais agilidade, menos
               burocracia e respaldo formal pelo Cadastur.
             </p>
@@ -103,13 +90,10 @@ export default function Sobre() {
       <section className="section values-section">
         <div className="container">
           <div className="section-heading centered">
-            <span className="kicker">O QUE VAI NA NOSSA MALA</span>
             <h2>Nossos valores não ficam só no discurso.</h2>
           </div>
           <div className="values-grid">
             <article>
-              <span>01</span>
-              <Heart />
               <h3>Proximidade</h3>
               <p>
                 Atendimento online não precisa ser distante. Você fala com
@@ -117,17 +101,13 @@ export default function Sobre() {
               </p>
             </article>
             <article>
-              <span>02</span>
-              <ShieldCheck />
               <h3>Responsabilidade</h3>
               <p>
                 Cada detalhe importa quando há tempo, dinheiro e expectativa
-                envolvidos — com cadastro regular no Ministério do Turismo.
+                envolvidos, com cadastro regular no Ministério do Turismo.
               </p>
             </article>
             <article>
-              <span>03</span>
-              <Sparkles />
               <h3>Simplicidade</h3>
               <p>
                 Explicamos opções e regras em português claro para você decidir
@@ -138,13 +118,12 @@ export default function Sobre() {
 
           <div className="cadastur-banner">
             <div>
-              <span className="kicker">CADASTRO OFICIAL • MINISTÉRIO DO TURISMO</span>
               <h3>
-                {siteConfig.legal.companyName} — CNPJ {siteConfig.legal.cnpj}
+                {siteConfig.legal.companyName}, CNPJ {siteConfig.legal.cnpj}
               </h3>
               <p>
-                Agência de Turismo regular em {siteConfig.legal.city} •
-                Cadastur nº {siteConfig.legal.cadasturNumber} • Válido de{" "}
+                Agência de Turismo regular em {siteConfig.legal.city}. Cadastur
+                nº {siteConfig.legal.cadasturNumber}, válido de{" "}
                 {siteConfig.legal.cadasturValidFrom} a{" "}
                 {siteConfig.legal.cadasturValidUntil}.
               </p>
@@ -164,12 +143,7 @@ export default function Sobre() {
       <section className="section online-section">
         <div className="container online-grid">
           <div>
-            <span className="kicker kicker-light">DE ONDE ATENDEMOS?</span>
-            <h2>
-              De qualquer lugar.
-              <br />
-              Para todo o Brasil.
-            </h2>
+            <h2>Atendimento de qualquer lugar para todo o Brasil.</h2>
           </div>
           <div>
             <p>
@@ -181,16 +155,12 @@ export default function Sobre() {
             </Link>
           </div>
         </div>
-        <div className="moving-plane" aria-hidden="true">
-          ✈
-        </div>
       </section>
 
       <section className="section about-cta">
         <div className="container">
           <div className="cta-ticket">
             <div>
-              <span className="kicker">PRÓXIMA PARADA</span>
               <h2>
                 Uma viagem com menos abas abertas e mais tranquilidade.
               </h2>

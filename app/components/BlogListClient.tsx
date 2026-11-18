@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowRight, Clock3 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Article } from "../blog/articles";
 
 export function BlogListClient({ articles }: { articles: Article[] }) {
@@ -48,15 +48,12 @@ export function BlogListClient({ articles }: { articles: Article[] }) {
             key={article.slug}
           >
             <div className="blog-card-top">
-              <span>{article.number}</span>
               <small>{article.category}</small>
             </div>
             <h3>{article.title}</h3>
             <p>{article.excerpt}</p>
             <div className="blog-card-foot">
-              <span>
-                <Clock3 /> {article.readTime}
-              </span>
+              <span>{article.readTime}</span>
               <ArrowRight />
             </div>
           </Link>

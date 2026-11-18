@@ -73,7 +73,6 @@ export function WhatsAppForm({ compact = false }: { compact?: boolean }) {
           <input
             name="nome"
             type="text"
-            placeholder="Como podemos te chamar?"
             required
             autoComplete="name"
           />
@@ -83,7 +82,6 @@ export function WhatsAppForm({ compact = false }: { compact?: boolean }) {
           <input
             name="origem"
             type="text"
-            placeholder="De onde você sai?"
             autoComplete="address-level2"
           />
         </label>
@@ -95,7 +93,6 @@ export function WhatsAppForm({ compact = false }: { compact?: boolean }) {
           <input
             name="destino"
             type="text"
-            placeholder="Para onde você quer ir?"
             required
           />
         </label>
@@ -135,7 +132,7 @@ export function WhatsAppForm({ compact = false }: { compact?: boolean }) {
         <textarea
           name="mensagem"
           rows={compact ? 3 : 4}
-          placeholder="Quantos dias, estilo de hospedagem, orçamento aproximado ou o que não pode faltar..."
+          placeholder="Quantos dias, estilo de hospedagem, orçamento aproximado ou o que não pode faltar"
         />
       </label>
 
@@ -146,8 +143,8 @@ export function WhatsAppForm({ compact = false }: { compact?: boolean }) {
       {prepared && (
         <div className="form-fallback" role="status">
           <p>
-            Mensagem pronta para envio. Se o WhatsApp não abriu automaticamente,
-            use os botões abaixo:
+            Mensagem pronta. Se o WhatsApp não abriu, abra o link ou copie o
+            texto.
           </p>
           <div className="form-fallback-actions">
             <a
@@ -178,7 +175,7 @@ export function WhatsAppForm({ compact = false }: { compact?: boolean }) {
       )}
 
       <p className="form-note">
-        Sem spam. Não armazenamos seus dados neste site — você confere e envia
+        Não armazenamos seus dados neste site. Você confere a mensagem e envia
         direto pelo WhatsApp. Veja nossa{" "}
         <Link href="/privacidade">Política de Privacidade</Link>.
       </p>

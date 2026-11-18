@@ -44,7 +44,7 @@ const faq = [
   ],
   [
     "Com quanto tempo de antecedência devo planejar?",
-    "Quanto antes, melhor para comparar opções — especialmente em férias, feriados e alta temporada. Mas também pesquisamos viagens mais próximas quando há disponibilidade.",
+    "Quanto antes, melhor para comparar opções, especialmente em férias, feriados e alta temporada. Mas também pesquisamos viagens mais próximas quando há disponibilidade.",
   ],
 ] as const;
 
@@ -67,9 +67,6 @@ export default function Contato() {
       <section className="inner-hero contact-hero">
         <div className="container inner-contact-grid">
           <div>
-            <span className="eyebrow eyebrow-light">
-              <i /> CONTATO
-            </span>
             <h1>
               Tem um destino na cabeça? <em>Conta para a gente.</em>
             </h1>
@@ -79,7 +76,6 @@ export default function Contato() {
             </p>
           </div>
           <div className="contact-pass">
-            <small>CANAL PRIORITÁRIO</small>
             <MessageCircle />
             <strong>WHATSAPP</strong>
             <span>{siteConfig.whatsapp.display}</span>
@@ -97,11 +93,10 @@ export default function Contato() {
       <section className="section contact-page-section">
         <div className="container contact-page-grid">
           <div>
-            <span className="kicker">SOLICITE SUA COTAÇÃO</span>
             <h2>Por onde começamos?</h2>
             <p>
-              Preencha os campos e seu WhatsApp será aberto com a mensagem
-              pronta. Você confere tudo antes de enviar.
+              Preencha os campos para abrir a mensagem pronta no WhatsApp. Você
+              confere tudo antes de enviar.
             </p>
             <WhatsAppForm compact />
           </div>
@@ -131,7 +126,7 @@ export default function Contato() {
                 <Clock3 />
                 <span>
                   <small>ATENDIMENTO</small>
-                  100% online • {siteConfig.legal.city} para todo o Brasil
+                  100% online, de {siteConfig.legal.city} para todo o Brasil
                 </span>
               </div>
               <a
@@ -166,7 +161,6 @@ export default function Contato() {
       <section className="section faq-section">
         <div className="container faq-grid">
           <div className="section-heading">
-            <span className="kicker">DÚVIDAS FREQUENTES</span>
             <h2>Antes de chamar, talvez sua resposta esteja aqui.</h2>
             <p>Se não estiver, melhor ainda: manda uma mensagem para a gente.</p>
           </div>
@@ -174,7 +168,6 @@ export default function Contato() {
             {faq.map(([question, answer], i) => (
               <details key={question} open={i === 0}>
                 <summary>
-                  <span>{String(i + 1).padStart(2, "0")}</span>
                   {question}
                   <ChevronDown />
                 </summary>

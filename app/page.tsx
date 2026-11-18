@@ -3,15 +3,8 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
-  BadgeCheck,
-  Headphones,
-  HeartHandshake,
-  Laptop,
   MessageCircle,
   Plane,
-  Search,
-  ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 import { TestimonialCarousel } from "./components/TestimonialCarousel";
 import { WhatsAppForm } from "./components/WhatsAppForm";
@@ -31,7 +24,6 @@ const services = [
     from: "Sua rotina",
     to: "Dias inesquecíveis",
     tag: "PACOTE COMPLETO",
-    icon: Plane,
     text: "Voo, hospedagem e experiências no mesmo planejamento.",
   },
   {
@@ -39,7 +31,6 @@ const services = [
     from: "Seu porto",
     to: "Mar aberto",
     tag: "CRUZEIROS",
-    icon: Sparkles,
     text: "Cabine, roteiro e documentação explicados sem complicar.",
   },
   {
@@ -47,21 +38,20 @@ const services = [
     from: "Onde você está",
     to: "Onde quer chegar",
     tag: "PASSAGENS",
-    icon: Search,
-    text: "Rotas e horários pensados para a sua viagem — não só o menor preço.",
+    text: "Rotas e horários pensados para a sua viagem, não só o menor preço.",
   },
 ];
 
 const steps = [
-  ["01", "Você chama", "Conte o destino, as datas e o seu jeito de viajar."],
-  ["02", "A gente pesquisa", "Buscamos opções que façam sentido para você."],
+  ["1", "Você chama", "Conte o destino, as datas e o seu jeito de viajar."],
+  ["2", "A gente pesquisa", "Buscamos opções que façam sentido para você."],
   [
-    "03",
+    "3",
     "Você confirma",
     "Explicamos tudo e ajustamos antes de reservar.",
   ],
   [
-    "04",
+    "4",
     "Mala pronta",
     "Você embarca com suporte antes e durante a viagem.",
   ],
@@ -77,15 +67,12 @@ export default function Home() {
         <div className="hero-orbit orbit-two" />
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">
-              <i /> Agência de viagens 100% online
-            </span>
             <h1>
               Sua próxima viagem começa <em>sem complicação.</em>
             </h1>
             <p>
               Você conta o que imagina. A gente pesquisa, organiza e acompanha
-              tudo — do primeiro orçamento até a volta para casa.
+              tudo, do primeiro orçamento até a volta para casa.
             </p>
             <div className="hero-actions">
               <a
@@ -103,19 +90,15 @@ export default function Home() {
               </Link>
             </div>
             <div className="trust-line">
-              <span>
-                <BadgeCheck /> Atendimento humano
-              </span>
-              <span>
-                <ShieldCheck /> Compra segura
-              </span>
+              <span>Atendimento humano</span>
+              <span>Compra segura</span>
               <a
                 href={siteConfig.legal.cadasturVerificationUrl}
                 target="_blank"
                 rel="noreferrer"
                 title="Verificar cadastro no Cadastur"
               >
-                <ShieldCheck /> Cadastur regular
+                Cadastur regular
               </a>
             </div>
           </div>
@@ -128,7 +111,7 @@ export default function Home() {
               <div className="pass-main">
                 <div className="pass-top">
                   <span>BOARDING PASS</span>
-                  <strong>CMM ✈</strong>
+                  <strong>CMM</strong>
                 </div>
                 <div className="route">
                   <div>
@@ -181,10 +164,7 @@ export default function Home() {
       <section className="section light-section" id="como-funciona">
         <div className="container">
           <div className="section-heading split">
-            <div>
-              <span className="kicker">CHECK-IN SIMPLES</span>
-              <h2>Viajar pode ser leve desde o começo.</h2>
-            </div>
+            <h2>Viajar pode ser leve desde o começo.</h2>
             <p>
               Nada de se perder entre sites, regras e detalhes. Organizamos a
               jornada em quatro passos claros.
@@ -206,11 +186,8 @@ export default function Home() {
       <section className="section navy-section">
         <div className="container difference-grid">
           <div className="section-heading">
-            <span className="kicker kicker-light">POR QUE COM A GENTE</span>
             <h2>
-              Praticidade online.
-              <br />
-              <em>Cuidado de verdade.</em>
+              Praticidade online com <em>cuidado de verdade.</em>
             </h2>
             <p>
               Automatizamos a burocracia, não o atendimento. Sempre tem uma
@@ -222,16 +199,12 @@ export default function Home() {
           </div>
           <div className="benefit-grid">
             <article>
-              <Laptop />
-              <span>01</span>
               <h3>100% online</h3>
               <p>
                 Resolva tudo de onde estiver, com agilidade e sem deslocamentos.
               </p>
             </article>
             <article>
-              <HeartHandshake />
-              <span>02</span>
               <h3>Do seu jeito</h3>
               <p>
                 Nada de roteiro pronto: escutamos prioridades, orçamento e
@@ -239,8 +212,6 @@ export default function Home() {
               </p>
             </article>
             <article>
-              <BadgeCheck />
-              <span>03</span>
               <h3>Agência regularizada</h3>
               <p>
                 Cadastro ativo no Cadastur ({siteConfig.legal.cadasturNumber}) e
@@ -248,8 +219,6 @@ export default function Home() {
               </p>
             </article>
             <article>
-              <Headphones />
-              <span>04</span>
               <h3>Suporte real</h3>
               <p>
                 Se surgir um imprevisto, você sabe exatamente com quem falar.
@@ -262,20 +231,16 @@ export default function Home() {
       <section className="section services-preview">
         <div className="container">
           <div className="section-heading split">
-            <div>
-              <span className="kicker">ESCOLHA O PRÓXIMO DESTINO</span>
-              <h2>O que a gente organiza para você.</h2>
-            </div>
+            <h2>O que a gente organiza para você.</h2>
             <Link className="text-link" href="/servicos">
               Ver todos os serviços <ArrowRight size={17} />
             </Link>
           </div>
           <div className="ticket-grid">
-            {services.map(({ code, from, to, tag, icon: Icon, text }) => (
+            {services.map(({ code, from, to, tag, text }) => (
               <article className="service-ticket" key={code}>
                 <div className="ticket-head">
                   <span>{tag}</span>
-                  <Icon />
                 </div>
                 <div className="ticket-route">
                   <div>
@@ -302,10 +267,9 @@ export default function Home() {
       <section className="section testimonials-section">
         <div className="container testimonial-grid">
           <div className="section-heading">
-            <span className="kicker">HISTÓRIAS QUE JÁ EMBARCARAM</span>
             <h2>O tipo de mensagem que faz nosso dia.</h2>
             <p>
-              Cada planejamento nasce de uma conversa de verdade — com opções
+              Cada planejamento nasce de uma conversa de verdade, com opções
               claras, sem pressa e suporte do início ao retorno.
             </p>
           </div>
@@ -316,10 +280,7 @@ export default function Home() {
       <section className="section home-blog-section">
         <div className="container">
           <div className="section-heading split">
-            <div>
-              <span className="kicker">GUIAS PARA VIAJAR MELHOR</span>
-              <h2>Informação que deixa a viagem mais leve.</h2>
-            </div>
+            <h2>Informação que deixa a viagem mais leve.</h2>
             <Link className="text-link" href="/blog">
               Ver todos os artigos <ArrowRight size={17} />
             </Link>
@@ -332,7 +293,6 @@ export default function Home() {
                 key={article.slug}
               >
                 <div>
-                  <span>{article.number}</span>
                   <small>{article.category}</small>
                 </div>
                 <h3>{article.title}</h3>
@@ -349,11 +309,10 @@ export default function Home() {
       <section className="section contact-section">
         <div className="container contact-grid">
           <div>
-            <span className="kicker kicker-light">PRONTO PARA O CHECK-IN?</span>
             <h2>Me conta: para onde você quer ir?</h2>
             <p>
-              Preencha os detalhes. A mensagem já chega organizada no nosso
-              WhatsApp e a conversa começa por lá.
+              A mensagem chega organizada no nosso WhatsApp e a conversa começa
+              por lá.
             </p>
             <div className="contact-note">
               <MessageCircle />

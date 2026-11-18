@@ -1,30 +1,29 @@
 "use client";
 
 import { KeyboardEvent, useState } from "react";
-import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
     text: "Foi a primeira vez que viajei sem ficar com vinte abas abertas. Resolveram tudo e ainda me avisaram cada próximo passo.",
     name: "Mariana & Caio",
-    trip: "Lua de mel • Maceió",
+    trip: "Lua de mel, Maceió",
   },
   {
     text: "O atendimento foi rápido, mas nunca apressado. Sentimos que o roteiro realmente foi pensado para a nossa família.",
     name: "Família Oliveira",
-    trip: "Férias • Gramado",
+    trip: "Férias, Gramado",
   },
   {
     text: "Quando o voo mudou, eu já estava nervosa. A equipe assumiu a situação e me orientou até tudo estar resolvido.",
     name: "Bianca R.",
-    trip: "Viagem internacional • Lisboa",
+    trip: "Viagem internacional, Lisboa",
   },
 ];
 
 export function TestimonialCarousel() {
   const [index, setIndex] = useState(0);
   const item = testimonials[index];
-  const total = String(testimonials.length).padStart(2, "0");
 
   const move = (n: number) =>
     setIndex((prev) => (prev + n + testimonials.length) % testimonials.length);
@@ -40,7 +39,6 @@ export function TestimonialCarousel() {
       aria-live="polite"
       onKeyDown={onKeyDown}
     >
-      <Quote className="quote-icon" aria-hidden="true" />
       <blockquote>“{item.text}”</blockquote>
       <div className="testimonial-meta">
         <div>
@@ -70,7 +68,7 @@ export function TestimonialCarousel() {
               <ArrowLeft />
             </button>
             <span>
-              {String(index + 1).padStart(2, "0")} / {total}
+              {index + 1} / {testimonials.length}
             </span>
             <button
               type="button"

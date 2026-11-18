@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Check,
-  Clock3,
-  MessageCircle,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, MessageCircle } from "lucide-react";
 import { articles, getArticle } from "../articles";
 import { buildWhatsAppUrl, siteConfig } from "../../lib/site-config";
 
@@ -104,9 +98,7 @@ export default async function ArticlePage({ params }: Props) {
             </nav>
             <div className="article-meta">
               <span>{article.category}</span>
-              <span>
-                <Clock3 /> {article.readTime}
-              </span>
+              <span>{article.readTime}</span>
               <span>{article.displayDate}</span>
             </div>
             <h1>{article.title}</h1>
@@ -120,7 +112,6 @@ export default async function ArticlePage({ params }: Props) {
             <nav aria-label="Índice do artigo">
               {article.sections.map((section, index) => (
                 <a href={`#secao-${index + 1}`} key={section.heading}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   {section.heading.replace(/^\d+\.\s*/, "")}
                 </a>
               ))}
@@ -151,7 +142,6 @@ export default async function ArticlePage({ params }: Props) {
             ))}
 
             <div className="article-help">
-              <span>PLANEJAMENTO PERSONALIZADO</span>
               <h2>Quer transformar essas dicas na sua próxima viagem?</h2>
               <p>
                 A Cadê Minha Mala pesquisa e organiza as opções com você.
@@ -172,7 +162,6 @@ export default async function ArticlePage({ params }: Props) {
 
       <section className="section related-section">
         <div className="container">
-          <span className="kicker">CONTINUE LENDO</span>
           <h2>Outros guias que podem ajudar.</h2>
           <div className="related-grid">
             {related.map((item) => (

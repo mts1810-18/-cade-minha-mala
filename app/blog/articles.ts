@@ -14,7 +14,6 @@ export type Article = {
   date: string;
   displayDate: string;
   readTime: string;
-  number: string;
   intro: string;
   sections: ArticleSection[];
 };
@@ -30,8 +29,7 @@ export const articles: Article[] = [
     date: "2026-08-07",
     displayDate: "07 AGO 2026",
     readTime: "6 min de leitura",
-    number: "01",
-    intro: "Planejar uma viagem pode ser tão gostoso quanto viajar — desde que você não tente resolver todos os detalhes ao mesmo tempo. O segredo é seguir uma ordem simples: primeiro entender a viagem, depois comparar as opções e só então confirmar as reservas.",
+    intro: "Planejar uma viagem pode ser tão gostoso quanto viajar, desde que você não tente resolver todos os detalhes ao mesmo tempo. O segredo é seguir uma ordem simples: primeiro entender a viagem, depois comparar as opções e só então confirmar as reservas.",
     sections: [
       {
         heading: "1. Comece pelo que realmente importa",
@@ -67,7 +65,6 @@ export const articles: Article[] = [
     date: "2026-08-07",
     displayDate: "07 AGO 2026",
     readTime: "5 min de leitura",
-    number: "02",
     intro: "A mala de mão não precisa carregar a viagem inteira. Ela precisa deixar o trajeto mais simples e garantir que os itens essenciais estejam acessíveis. Uma boa organização começa antes de escolher o que levar: começa conferindo as regras do seu voo.",
     sections: [
       {
@@ -103,7 +100,6 @@ export const articles: Article[] = [
     date: "2026-08-07",
     displayDate: "07 AGO 2026",
     readTime: "6 min de leitura",
-    number: "03",
     intro: "Não existe uma resposta única para todo viajante. Um pacote pode facilitar muito uma viagem, enquanto reservas separadas podem oferecer mais liberdade em outra. A melhor escolha depende do destino, da data, do perfil do grupo e do quanto você quer personalizar.",
     sections: [
       {

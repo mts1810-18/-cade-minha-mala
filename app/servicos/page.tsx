@@ -1,18 +1,5 @@
 import type { Metadata } from "next";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  BedDouble,
-  Car,
-  Check,
-  Compass,
-  Hotel,
-  MapPinned,
-  Plane,
-  ShieldPlus,
-  Ship,
-  TicketCheck,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Plane } from "lucide-react";
 import { buildWhatsAppUrl } from "../lib/site-config";
 
 export const metadata: Metadata = {
@@ -24,8 +11,6 @@ export const metadata: Metadata = {
 
 const catalog = [
   {
-    icon: Plane,
-    number: "01",
     title: "Passagens aéreas",
     text: "Pesquisa de rotas, horários, bagagem e tarifas para você escolher sabendo exatamente o que está comprando.",
     items: [
@@ -35,10 +20,8 @@ const catalog = [
     ],
   },
   {
-    icon: Hotel,
-    number: "02",
     title: "Hotéis e resorts",
-    text: "Hospedagens escolhidas pelo seu estilo, localização, estrutura e orçamento — não só por uma foto bonita.",
+    text: "Hospedagens escolhidas pelo seu estilo, localização, estrutura e orçamento, não só por uma foto bonita.",
     items: [
       "Hotéis, pousadas e resorts",
       "Opções para casais e famílias",
@@ -46,8 +29,6 @@ const catalog = [
     ],
   },
   {
-    icon: MapPinned,
-    number: "03",
     title: "Pacotes completos",
     text: "Voo, hospedagem, traslado e experiências combinados em um planejamento simples de acompanhar.",
     items: [
@@ -57,8 +38,6 @@ const catalog = [
     ],
   },
   {
-    icon: Ship,
-    number: "04",
     title: "Cruzeiros",
     text: "Escolha do navio, cabine, roteiro e datas com orientação sobre documentos, taxas e o que já está incluído.",
     items: [
@@ -68,8 +47,6 @@ const catalog = [
     ],
   },
   {
-    icon: Car,
-    number: "05",
     title: "Locação de veículos",
     text: "A categoria certa para a rota, o número de passageiros e a bagagem, com regras explicadas antes da retirada.",
     items: [
@@ -79,8 +56,6 @@ const catalog = [
     ],
   },
   {
-    icon: ShieldPlus,
-    number: "06",
     title: "Seguro viagem",
     text: "Coberturas médicas, bagagem e assistência internacional explicadas de forma simples para você viajar protegido.",
     items: [
@@ -90,15 +65,11 @@ const catalog = [
     ],
   },
   {
-    icon: BedDouble,
-    number: "07",
     title: "Viagens especiais",
-    text: "Lua de mel, aniversário, férias em família ou a viagem que você esperou por anos — com atenção ao motivo.",
+    text: "Lua de mel, aniversário, férias em família ou a viagem que você esperou por anos, com atenção ao motivo.",
     items: ["Lua de mel", "Grupos e famílias", "Datas comemorativas"],
   },
   {
-    icon: Compass,
-    number: "08",
     title: "Roteiros sob medida",
     text: "Organização de passeios, traslados e conexões para você aproveitar cada dia sem perder tempo com logística.",
     items: [
@@ -114,9 +85,6 @@ export default function Servicos() {
     <main id="conteudo">
       <section className="inner-hero services-hero">
         <div className="container">
-          <span className="eyebrow eyebrow-light">
-            <i /> SERVIÇOS & PACOTES
-          </span>
           <h1>
             Tudo o que sua viagem precisa. <em>Sem você carregar o peso.</em>
           </h1>
@@ -130,7 +98,6 @@ export default function Servicos() {
       <section className="section">
         <div className="container services-catalog">
           <div className="catalog-intro">
-            <span className="kicker">NOSSO BALCÃO DE EMBARQUE</span>
             <h2>Como podemos ajudar?</h2>
             <p>
               Não encontrou exatamente o que precisa? Chama a gente. Uma viagem
@@ -139,12 +106,8 @@ export default function Servicos() {
           </div>
 
           <div className="catalog-grid">
-            {catalog.map(({ icon: Icon, number, title, text, items }) => (
-              <article className="catalog-card" key={number}>
-                <div className="catalog-top">
-                  <Icon />
-                  <span>{number}</span>
-                </div>
+            {catalog.map(({ title, text, items }) => (
+              <article className="catalog-card" key={title}>
                 <h3>{title}</h3>
                 <p>{text}</p>
                 <ul>
@@ -172,10 +135,7 @@ export default function Servicos() {
       <section className="section package-section">
         <div className="container">
           <div className="section-heading split">
-            <div>
-              <span className="kicker">EXEMPLOS DE EMBARQUE</span>
-              <h2>Três ideias para começar a imaginar.</h2>
-            </div>
+            <h2>Três ideias para começar a imaginar.</h2>
             <p>
               Destinos e formatos ilustrativos. A cotação final depende da
               data, disponibilidade e perfil da viagem.
@@ -285,22 +245,13 @@ export default function Servicos() {
       <section className="section included-section">
         <div className="container included-grid">
           <div className="section-heading">
-            <span className="kicker kicker-light">EM TODA COTAÇÃO</span>
             <h2>O que já vem no nosso atendimento.</h2>
           </div>
           <div className="included-list">
-            <span>
-              <TicketCheck /> Pesquisa e comparação cuidadosa
-            </span>
-            <span>
-              <TicketCheck /> Explicação das regras da compra
-            </span>
-            <span>
-              <TicketCheck /> Organização dos comprovantes
-            </span>
-            <span>
-              <TicketCheck /> Suporte antes e durante a viagem
-            </span>
+            <span>Pesquisa e comparação cuidadosa</span>
+            <span>Explicação das regras da compra</span>
+            <span>Organização dos comprovantes</span>
+            <span>Suporte antes e durante a viagem</span>
           </div>
         </div>
       </section>

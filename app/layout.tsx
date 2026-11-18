@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Cadê Minha Mala — Agência de viagens 100% online",
+        alt: "Cadê Minha Mala, agência de viagens 100% online",
       },
     ],
   },

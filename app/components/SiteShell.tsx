@@ -64,12 +64,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <Link
             href="/"
             className="official-logo-link"
-            aria-label="Cadê Minha Mala — início"
+            aria-label="Cadê Minha Mala, início"
           >
             <Image
               className="official-logo"
               src="/logo-cade-minha-mala.webp"
-              alt="Cadê Minha Mala — Agência de Viagens e Turismo"
+              alt="Cadê Minha Mala, Agência de Viagens e Turismo"
               width={520}
               height={291}
               priority
@@ -128,12 +128,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <Link
               href="/"
               className="footer-logo-box"
-              aria-label="Cadê Minha Mala — início"
+              aria-label="Cadê Minha Mala, início"
             >
               <Image
                 className="footer-logo"
                 src="/logo-cade-minha-mala.webp"
-                alt="Cadê Minha Mala — Agência de Viagens e Turismo"
+                alt="Cadê Minha Mala, Agência de Viagens e Turismo"
                 width={520}
                 height={291}
                 loading="eager"
@@ -145,14 +145,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <br />A gente cuida do resto.
             </p>
             <span className="online-pill">
-              <i /> Agência 100% online • {siteConfig.legal.city}
+              Agência 100% online em {siteConfig.legal.city}
             </span>
             <div className="footer-cadastur">
               <ShieldCheck size={16} aria-hidden="true" />
               <div>
                 <strong>{siteConfig.legal.companyName}</strong>
                 <span>
-                  CNPJ / Cadastur: {siteConfig.legal.cadasturNumber} •{" "}
+                  CNPJ e Cadastur: {siteConfig.legal.cadasturNumber}.{" "}
                   <a
                     href={siteConfig.legal.cadasturVerificationUrl}
                     target="_blank"
@@ -232,11 +232,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
         <div className="container footer-bottom">
           <span>
-            © {new Date().getFullYear()} {siteConfig.name} •{" "}
+            © {new Date().getFullYear()} {siteConfig.name},{" "}
             {siteConfig.legal.companyName}
           </span>
           <span>
-            CNPJ {siteConfig.legal.cnpj} • Atendimento remoto em todo o Brasil
+            CNPJ {siteConfig.legal.cnpj}, atendimento remoto em todo o Brasil
           </span>
         </div>
       </footer>

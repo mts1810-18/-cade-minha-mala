@@ -15,16 +15,10 @@ export default function Privacidade() {
     <main id="conteudo">
       <section className="inner-hero">
         <div className="container">
-          <span className="eyebrow eyebrow-light">
-            <i /> TRANSPARÊNCIA E LGPD
-          </span>
           <h1>
             Política de <em>Privacidade</em>
           </h1>
-          <p>
-            Clareza também faz parte de uma boa viagem. Veja como tratamos os
-            dados informados durante o atendimento.
-          </p>
+          <p>Como tratamos os dados informados durante o atendimento.</p>
         </div>
       </section>
 
